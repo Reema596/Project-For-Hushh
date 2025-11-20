@@ -134,30 +134,31 @@ Every page is interconnected for smooth travel exploration.
 Hundreds of curated travel images and theme-based assets.
 
 # 🐳 Docker Deployment
+#### Step 0: Open the Project Folder
 
-Step1: Build the Docker image:
+![Step 1](https://github.com/Reema596/Project-For-Hushh/blob/main/Step0.png)
 
-command: docker build -t travel-website .
+#### Step 2: Build the Docker Image
+
+![Step 2](https://github.com/Reema596/Project-For-Hushh/blob/main/Step1.png)
+
+#### Step 3: Run the Docker Container
+![Step 3](https://github.com/Reema596/Project-For-Hushh/blob/main/Step3.png)
 
 
-Run the container:
-
-command: docker run -d -p 8080:80 travel-website
-
-
-Your site will be available at:
-👉 http://localhost:8080
+### Your site will be available at:
+### 👉 http://localhost:8080
 
 # 🚀 CI/CD with Jenkins
 
 Jenkins Pipeline automates:
 
-✔ Pulling latest code from GitHub
-✔ Building Docker image
-✔ Logging into Docker Hub
-✔ Pushing updated build
-✔ Stopping old container
-✔ Deploying the latest version
+- ✔ Pulling latest code from GitHub
+- ✔ Building Docker image
+- ✔ Logging into Docker Hub
+- ✔ Pushing updated build
+- ✔ Stopping old container
+- ✔ Deploying the latest version
 
 This ensures continuous integration and zero-downtime deployment.
 
