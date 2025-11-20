@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip</title>
+    <link rel="stylesheet" href="plan-trip.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Plan Your Trip</h1>
+        <p>Design every detail of your perfect getaway</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#dates">Dates</a></li>
+                    <li><a href="#budget">Budget</a></li>
+                    <li><a href="#duration">Duration</a></li>
+                    <li><a href="#travelers">Traveler Info</a></li>
+                    <li><a href="#accommodation">Accommodation</a></li>
+                    <li><a href="#transport">Transport</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#packing">Packing List</a></li>
+                    <li><a href="#insurance">Insurance & Safety</a></li>
+                    <li><a href="#summary">Summary</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="destination" class="section">
+                <h2>Destination Selection</h2>
+                <label for="destination-search">Search Destination:</label>
+                <input type="text" id="destination-search" placeholder="e.g., Paris, New York, Tokyo">
+                <button id="explore-map-btn">Explore on Map</button>
+                <p id="map-message" class="hidden-message" style="display: none;">Map feature is under development. Please check back soon!</p>
+                
+                <div id="map-container" class="map-container" style="display: none;">
+                    <iframe id="map" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+                <section id="dates" class="section">
+                <h2>Select Dates</h2>
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date">
+                <label><input type="checkbox" id="flexible-dates"> Flexible Dates</label>
+            </section>
+
+            <section id="budget" class="section">
+                <h2>Budget Estimation</h2>
+                <input type="range" id="budget-slider" min="10000" max="50000" step="2000" value="1500" oninput="updateBudget()">
+                <span id="budget-display">Rs.10000</span>
+            </section>
+
+            <section id="duration" class="section">
+                <h2>Trip Duration</h2>
+                <label for="duration-input">Number of Days:</label>
+                <input type="number" id="duration-input" min="1" max="30" value="7">
+            </section>
+
+            <section id="travelers" class="section">
+                <h2>Traveler Information</h2>
+                <label for="num-travelers">Number of Travelers:</label>
+                <input type="number" id="num-travelers" min="1" value="1">
+            
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="adventure" name="preference" value="Adventure">
+                        Adventure
+                    </label>
+                    <label>
+                        <input type="checkbox" id="relaxation" name="preference" value="Relaxation">
+                        Relaxation
+                    </label>
+                    <label>
+                        <input type="checkbox" id="cultural" name="preference" value="Cultural">
+                        Cultural
+                    </label>
+                </div>
+            </section>
+            
+            <section id="accommodation" class="section">
+                <h2>Accommodation Options</h2>
+                <label for="accommodation-type">Accommodation Type:</label>
+                <select id="accommodation-type">
+                    <option value="hotel">Hotel</option>
+                    <option value="hostel">Hostel</option>
+                    <option value="rental">Vacation Rental</option>
+                </select>
+            </section>
+
+            <section id="transport" class="section">
+                <h2>Transport Options</h2>
+                <label>Preferred Transport Mode:</label>
+                <select id="transport-mode">
+                    <option value="flight">Flight</option>
+                    <option value="train">Train</option>
+                    <option value="bus">Bus</option>
+                    <option value="rental">Car Rental</option>
+                </select>
+            </section>
+
+            <section id="activities" class="section">
+                <h2>Activities and Attractions</h2>
+                <div class="checkbox-group">
+                <label><input type="checkbox" id="sightseeing"> Sightseeing</label>
+                <label><input type="checkbox" id="food-tasting"> Food Tasting</label>
+                <label><input type="checkbox" id="outdoor-adventures"> Outdoor Adventures</label>
+                </div>
+            </section>
+
+            <section id="packing-list" class="section">
+                <h2>Packing List Generator</h2>
+                <button id="packing-list-btn">Show Packing List</button>
+                <div id="packing-list-items" class="hidden-message" style="display: none;">
+                    <ul>
+                        <li>Clothing (shirts, pants, dresses)</li>
+                        <li>Footwear (shoes, sandals)</li>
+                        <li>Toiletries (toothbrush, toothpaste, shampoo)</li>
+                        <li>Documents (passport, tickets)</li>
+                        <li>Electronics (charger, camera)</li>
+                        <li>Medications (if needed)</li>
+                        <li>Snacks and Water</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="insurance-plans" class="section">
+                <h2>Insurance Plans</h2>
+                <button id="insurance-plans-btn">Show Insurance Plans</button>
+                <div id="insurance-plans-list" class="hidden-message" style="display: none;">
+                    <div class="insurance-plan" id="basic-plan">
+                        <h3>Basic Coverage</h3>
+                        <p>Cost: Rs.500/month</p>
+                        <button onclick="optIn('Basic Coverage')">Opt for Basic Coverage</button>
+                    </div>
+                    <div class="insurance-plan" id="comprehensive-plan">
+                        <h3>Comprehensive Coverage</h3>
+                        <p>Cost: Rs.1000/month</p>
+                        <button onclick="optIn('Comprehensive Coverage')">Opt for Comprehensive Coverage</button>
+                    </div>
+                    <div class="insurance-plan" id="adventure-plan">
+                        <h3>Adventure Coverage</h3>
+                        <p>Cost: Rs.1500/month</p>
+                        <button onclick="optIn('Adventure Coverage')">Opt for Adventure Coverage</button>
+                    </div>
+                    <div class="insurance-plan" id="family-plan">
+                        <h3>Family Plan</h3>
+                        <p>Cost: Rs.2000/month</p>
+                        <button onclick="optIn('Family Plan')">Opt for Family Plan</button>
+                    </div>
+                </div>
+                <div id="insurance-display" style="margin-top: 10px; display: none;"></div>
+            </section>
+            
+            <section id="summary" class="section">
+                <h2>Summary</h2>
+                <button id="generate-summary-btn">Generate Summary</button>
+                <div id="summary-display" style="margin-top: 10px;"></div>
+                <button id="submit-trip-btn" style="display: block;">Submit</button>
+            </section>
+
+        </main>
+    </div>
+    <script src="explore.js"></script>
+</body>
+</html>

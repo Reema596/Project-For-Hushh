@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel</title>
+    <link rel="stylesheet" href="adventure.css">
+</head>
+<body>
+
+    <section class="adventure-hero">
+        <h1>Adventure Awaits!</h1>
+        <p>Embark on thrilling journeys and experience the rush of a lifetime.</p>
+    </section>
+
+    <section class="activities">
+        <h2>Popular Adventure Activities</h2>
+        <div class="activity-container">
+            <div class="activity-card">
+                <img src="trekking.jpg" alt="Trekking">
+                <h3>Trekking</h3>
+                <p>Explore breathtaking trails across the globe.</p>
+            </div>
+            <div class="activity-card">
+                <img src="scuba-diving.jpg" alt="Scuba Diving">
+                <h3>Scuba Diving</h3>
+                <p>Dive into the wonders of the ocean.</p>
+            </div>
+            <div class="activity-card">
+                <img src="skydiving.jpg" alt="Skydiving">
+                <h3>Skydiving</h3>
+                <p>Feel the thrill of free-fall from the skies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <h2>Top Adventure Destinations</h2>
+        <div class="destination-container">
+            <div class="destination-card">
+                <img src="himalayas.jpg" alt="Himalayas">
+                <h3>The Himalayas</h3>
+                <p>Trek through the world's highest peaks.</p>
+            </div>
+            <div class="destination-card">
+                <img src="amazon.jpg" alt="Amazon Rainforest">
+                <h3>Amazon Rainforest</h3>
+                <p>Discover the heart of nature’s biodiversity.</p>
+            </div>
+            <div class="destination-card">
+                <img src="alps.jpg" alt="Swiss Alps">
+                <h3>Swiss Alps</h3>
+                <p>Ski down the slopes of Switzerland's stunning mountains.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages">
+        <h2>Adventure Travel Packages</h2>
+        <div class="package-container">
+            <div class="package-card">
+                <h3>7-Day Himalayan Trek</h3>
+                <p>Includes guided trekking, camping, and meals.</p>
+                <span>Starting at Rs.1,20,000</span>
+                <button>Book Now</button>
+            </div>
+            <div class="package-card">
+                <h3>5-Day Scuba Diving in Bali</h3>
+                <p>Includes dive sessions and accommodation by the beach.</p>
+                <span>Starting at Rs.2,50,000</span>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Travelers Say</h2>
+        <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <blockquote>
+                    <p>"The Himalayan trek was an experience of a lifetime! Highly recommend it to adventure lovers."</p>
+                    <cite>- Kashish</cite>
+                </blockquote>
+            </div>
+            <div class="carousel-slide">
+                <blockquote>
+                    <p>"Scuba diving in Bali was absolutely magical. The marine life was breathtaking!"</p>
+                    <cite>- Anjali</cite>
+                </blockquote>
+            </div>
+            <div class="carousel-slide">
+                <blockquote>
+                    <p>"Skydiving in the Swiss Alps gave me the adrenaline rush I had always dreamed of."</p>
+                    <cite>- Rohan</cite>
+                </blockquote>
+            </div>
+        </div>
+    
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Travel | All Rights Reserved</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Tips & Guides</title>
+    <link rel="stylesheet" href="travel-tips.css"> 
+</head>
+<body>
+
+    <div class="travel-tips">
+        <h2>Essential Travel Tips</h2>
+        <p>Prepare yourself for an incredible journey with our expert travel tips. From safety advice to cultural insights, we've got you covered!</p>
+
+        <div class="travel-tips-image">
+            <img src="travel-tips.jpg" alt="Travel Tips Image">
+            <a href="#tips" class="tips-button">Explore Tips</a>
+        </div>
+
+        <div class="tips-list" id="tips">
+            <h4>Travel Safety</h4>
+            <p>Your safety is paramount. Always stay alert and keep your belongings secure. Research your destination’s safety recommendations and avoid risky areas to ensure a worry-free adventure.</p>
+
+            <h4>Packing Lists</h4>
+            <p>Be a savvy packer! Create a packing list tailored to your destination's climate and activities. Remember to include essentials like travel documents, medication, and versatile clothing to make the most of your luggage.</p>
+
+            <h4>Cultural Etiquette</h4>
+            <p>Respect local customs to enhance your travel experience. Learn a few key phrases in the local language, understand social norms, and embrace cultural practices to connect with locals and enrich your journey.</p>
+
+            <h4>Local Cuisine</h4>
+            <p>Food is a gateway to culture! Explore local delicacies and street food to get a taste of the region’s traditions. Don't hesitate to ask locals for recommendations; you'll discover hidden culinary gems!</p>
+        </div>
+
+        <div class="hidden-tips" id="hidden-tips">
+            <h4>5. Sustainable Travel</h4>
+            <p>Make a positive impact on the environment by practicing sustainable travel. Opt for eco-friendly accommodations, reduce plastic use, and respect wildlife to ensure that your travel benefits both you and the planet.</p>
+
+            <h4>6. Travel Insurance</h4>
+            <p>Protect yourself from unexpected events by investing in travel insurance. It can save you from financial loss due to cancellations, medical emergencies, or lost belongings, allowing you to travel with peace of mind.</p>
+
+            <h4>7. Staying Healthy on the Road</h4>
+            <p>Maintain your well-being while traveling. Stay hydrated, eat balanced meals, and get enough rest to keep your energy levels up. Don't forget to pack a small first-aid kit for any minor health issues!</p>
+
+            <h4>8. Navigating Transportation</h4>
+            <p>Familiarize yourself with local transportation options before you arrive. Whether it's public transit, taxis, or rental cars, understanding how to get around will enhance your travel experience and save you time.</p>
+        </div>
+        <button class="load-more" id="loadMoreBtn">Load More</button>
+        <button class="see-less" id="seeLessBtn" style="display:none;">See Less</button>
+    </div>
+    <div class="experts-section">
+        <h3>Meet Our Travel Experts</h3>
+        <div class="experts-container">
+            <div class="expert-card">
+                <img src="john.jpg" alt="John Doe">
+                <div class="expert-info">
+                    <h4>John Doe</h4>
+                    <p>Travel Safety Specialist</p>
+                    <p class="bio">With over 10 years of experience, John ensures that your travel is safe and enjoyable.</p>
+                </div>
+            </div>
+            <div class="expert-card">
+                <img src="jane.jpg" alt="Jane Smith">
+                <div class="expert-info">
+                    <h4>Jane Smith</h4>
+                    <p>Cultural Advisor</p>
+                    <p class="bio">Jane shares her deep knowledge of cultures, making your travels enriching and authentic.</p>
+                </div>
+            </div>
+            <div class="expert-card">
+                <img src="mike.jpg" alt="Mike Johnson">
+                <div class="expert-info">
+                    <h4>Mike Johnson</h4>
+                    <p>Adventure Travel Guide</p>
+                    <p class="bio">Mike's adventurous spirit leads you to the best outdoor experiences around the globe.</p>
+                </div>
+            </div>
+            <div class="expert-card">
+                <img src="emily.jpg" alt="Emily Davis">
+                <div class="expert-info">
+                    <h4>Emily Davis</h4>
+                    <p>Culinary Travel Expert</p>
+                    <p class="bio">Emily takes you on a culinary journey, exploring the world through its flavors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.getElementById('loadMoreBtn').onclick = function() {
+            var hiddenTips = document.getElementById('hidden-tips');
+            hiddenTips.style.display = 'block'; 
+            this.style.display = 'none'; 
+            document.getElementById('seeLessBtn').style.display = 'block';
+        }
+
+        document.getElementById('seeLessBtn').onclick = function() {
+            var hiddenTips = document.getElementById('hidden-tips');
+            hiddenTips.style.display = 'none';
+            this.style.display = 'none'; 
+            document.getElementById('loadMoreBtn').style.display = 'block'; 
+        }
+    </script>
+</body>
+</html>
