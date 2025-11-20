@@ -1,0 +1,189 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+
+.travel-tips {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    margin: 50px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.travel-tips h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.travel-tips p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.travel-tips-image {
+    position: relative;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.travel-tips-image img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tips-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.tips-button:hover {
+    background-color: #ff4d4d;
+}
+
+
+.tips-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tips-list h4, .hidden-tips h4 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 10px;
+}
+
+.tips-list p, .hidden-tips p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.load-more, .see-less {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden-tips {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .travel-tips h2 {
+        font-size: 2em;
+    }
+    
+    .travel-tips p,
+    .tips-list p {
+        font-size: 1em;
+    }
+    
+    .tips-button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
+.experts-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.experts-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.experts-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.expert-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 220px;
+    margin: 0 10px;
+}
+
+.expert-card:hover {
+    transform: scale(1.05);
+}
+
+.expert-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.expert-info {
+    padding: 15px;
+}
+
+.expert-info h4 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+}
+
+.expert-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #444;
+}
+

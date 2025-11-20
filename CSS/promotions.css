@@ -1,0 +1,235 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+
+.promo-banner {
+    background-color: rgba(47, 174, 212, 0.467);
+    text-align: center;
+    padding: 2em 1em;
+    margin-bottom: 2em;
+}
+
+.promo-banner h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.promo-banner p {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    color: #444;
+}
+
+.promo-banner .banner-img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 1em;
+    border-radius: 8px;
+}
+
+
+.featured-promotions {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.featured-promotions h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5em;
+}
+
+.promo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.promo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+}
+
+.promo-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.promo-card h3 {
+    font-size: 1.2rem;
+    color: #ff5722;
+    margin-bottom: 0.5em;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.promo-card button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo-card button:hover {
+    background-color: #e64a19;
+}
+
+
+.limited-time-offers {
+    background-color: #e0f7fa;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.limited-time-offers h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+}
+
+.offer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.offer-item {
+    background-color: #fff;
+    border-left: 5px solid #00796b;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.offer-item h4 {
+    font-size: 1.2rem;
+    color: #00796b;
+    margin-bottom: 0.5em;
+}
+
+.offer-item p {
+    color: #444;
+}
+
+
+.newsletter-signup {
+    background-color: #f1f8e9;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.newsletter-signup h2 {
+    font-size: 1.6rem;
+    color: #388e3c;
+    margin-bottom: 1em;
+}
+
+.newsletter-signup p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.newsletter-signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-signup button {
+    background-color: #388e3c;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-signup button:hover {
+    background-color: #2e7d32;
+}
+
+
+footer p {
+    font-size: 1rem;
+    margin-top: 0.5em;
+}
+
+footer nav {
+    margin-top: 1em;
+}
+
+footer nav a {
+    color: #ffb74d;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .promo-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
